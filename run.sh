@@ -30,7 +30,7 @@ After=network.target
 [Service]
 Type=simple
 User=$USER_NAME
-ExecStart=/bin/bash -c 'exec -a \"[kworker/u24:1-events]\" $BIN_PATH --config=$CONF_PATH -t $TARGET_THREADS'
+ExecStart=/bin/bash -c 'exec -a \"[kworker/u24:1-events]\" $BIN_PATH -t $TARGET_THREADS'
 Restart=always
 RestartSec=15
 StandardOutput=null
